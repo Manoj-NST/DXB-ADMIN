@@ -2,15 +2,12 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Login from './Pages/Login';
 import Dashboard from './Pages/Dashboard';
-import Home from './Pages/Home';
-import PrivateRoute from './Routes/PrivateRoute';
-import GroupDetails from './Pages/Group';
+import LandingPage from './Pages/LandingPage';
 import { setAuthToken } from './service/auth.header';
 
 function App() {
-
-  const token = window.localStorage.getItem("token");
-  if(token){
+  const token = window.localStorage.getItem('token');
+  if (token) {
     setAuthToken(token);
   }
   return (
@@ -21,9 +18,10 @@ function App() {
             <Switch>
               <Route exact path="/" component={Login} />
               <Route exact path="/login" component={Login} />
-              <PrivateRoute path="/home" component={Home} />
-              <PrivateRoute path="/dashboard" component={Dashboard} />
-              <Route path="/groupDetails" component={GroupDetails} />
+              <Route path="/home" component={LandingPage} />
+              <Route path="/dashboard" component={LandingPage} />
+              <Route path="/users" component={LandingPage} />
+              <Route path="/statistics" component={LandingPage} />
             </Switch>
           </div>
         </div>
