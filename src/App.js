@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Login from './Pages/Login';
-import Dashboard from './Pages/Dashboard';
+import UserCreationPage from './Pages/UserCreationPage';
 import LandingPage from './Pages/LandingPage';
 import { setAuthToken } from './service/auth.header';
 
@@ -22,6 +22,7 @@ function App() {
               <Route path="/dashboard" component={LandingPage} />
               <Route path="/users" component={LandingPage} />
               <Route path="/statistics" component={LandingPage} />
+              <Route path="/user-creation" component={UserCreationPage} />
             </Switch>
           </div>
         </div>

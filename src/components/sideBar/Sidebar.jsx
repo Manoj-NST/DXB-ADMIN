@@ -27,6 +27,12 @@ const sidebarNavItems = [
       to: '/statistics',
       section: 'statistics'
   },
+  {
+    display: 'USER CREATION',
+    icon: <i className='bx bx-receipt'></i>,
+    to: '/user-creation',
+    section: 'user-creation'
+},
 ]
 
 const Sidebar = () => {
